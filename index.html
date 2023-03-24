@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/e1a323daa1.js" crossorigin="anonymous"></script>
+    <script src="js/game.js" defer></script>
     <title>Tailwind Incremental</title>
 </head>
 <body class="bg-black mx-5 mt-5 text-white">
@@ -16,9 +17,24 @@
             <span class="text-3xl px-4">Tailwind Incremental</span>
         </section>
         <section id="left-nav" class="inline-flex justify-end items-center bg-transparent outline-none border-none text-sm opacity-50 hover:opacity-75" style="margin-left: 60%; width: 14.8%;">
-            <button>Home</button>
+            <button onclick="transition_home()">Home</button>
         </section>
     </nav>
+    <!-- <main style="transition: opacity 5s ease-in-out;" id="body_content"> -->
+    <main id="body_content" class="transition-opacity duration-500 ease-in-out">
+        <div class="text-center text-2xl" id="money display parent">
+            <h2 class="text-yellow-200" id="money display child"><span class="text-green-400 font-bold" id="money display child child">0</span> KROMER</h2>
+            <h3 class="text-base"><span id="money display second child child" class="text-red-200 font-bold">1</span> per <span id="money display second child second child" class="text-blue-200 font-bold">50</span>ms</h3>
+        </div>
+    </main>
+    <div class="hidden">
+        <div id="home">
+            <div class="text-center text-2xl" id="money display parent">
+                <h2 class="text-yellow-200" id="money display child"><span class="text-green-400 font-bold" id="money display child child">0</span> KROMER</h2>
+                <h3 class="text-base"><span id="money display second child child" class="text-red-200 font-bold">1</span> per <span id="money display second child second child" class="text-blue-200 font-bold">50</span>ms</h3>
+            </div>
+        </div>
+    </div>
 </body>
-
+<script src="js/data.js"></script>
 </html>
