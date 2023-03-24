@@ -9,19 +9,22 @@
     <script src="js/game.js" defer></script>
     <title>Tailwind Incremental</title>
 </head>
-
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+</style>
 <body class="bg-black mx-5 mt-5 text-white">
     <!-- <h1 class="text-white text-3xl font-bold">Test</h1> -->
     <nav>
         <section id="logo" class="inline">
             <i class="fa-solid fa-wind text-3xl" style="color: #6491dd;"></i>
-            <span class="text-3xl px-4">Tailwind Incremental</span>
+            <span class="text-3xl px-4" style="font-family: 'Poppins';">tailwindincremental</span>
         </section>
         <section id="left-nav"
             class="inline-flex justify-end items-center bg-transparent outline-none border-none text-sm transition-opacity duration-300 ease-in-out"
-            style="margin-left: 60%; width: 14.8%;">
+            style="margin-left: 57.8%; width: 14.8%;">
             <button onclick="transition_tab('home')" class="pr-5 opacity-50 hover:opacity-75">Home</button>
-            <button onclick="transition_tab('shop')" class="opacity-50 hover:opacity-75">Shop</button>
+            <button onclick="transition_tab('shop')" class="pr-5 opacity-50 hover:opacity-75">Shop</button>
+            <button onclick="transition_tab('debug')" class="opacity-50 hover:opacity-75">Debug</button>
         </section>
     </nav>
     <!-- <main style="transition: opacity 5s ease-in-out;" id="body_content"> -->
@@ -30,7 +33,7 @@
             <h2 class="text-yellow-200" id="money display child"><span class="text-green-400 font-bold"
                     id="money display child child">0</span> KROMER</h2>
             <h3 class="text-base"><span id="money display second child child" class="text-red-200 font-bold">1</span>
-                per <span id="money display second child second child" class="text-blue-200 font-bold">50</span>ms</h3>
+                per <span id="money display second child second child" class="text-blue-200 font-bold">1000</span>ms</h3>
         </div>
     </main>
     <div class="hidden">
@@ -40,7 +43,7 @@
                         id="money display child child">0</span> KROMER</h2>
                 <h3 class="text-base"><span id="money display second child child"
                         class="text-red-200 font-bold">1</span> per <span id="money display second child second child"
-                        class="text-blue-200 font-bold">50</span>ms</h3>
+                        class="text-blue-200 font-bold">1000</span>ms</h3>
             </div>
         </div>
         <div id="settings">
@@ -54,10 +57,14 @@
                 <div>
                     <div class="text-xl font-medium text-black">Efficiency</div>
                     <p class="text-gray-500">Increase revenue by 1$</p>
-                    <p class="opacity-75 text-sm text-black">Cost: <span id="shop-item__efficiency-cost">50</span>$</p>
+                    <p class="opacity-75 text-sm text-black">Cost: <span id="shop-item__efficiency-cost">10</span>$</p>
                     <p class="opacity-75 text-sm text-black">You have: <span id="shop-item__efficiency-amount">0</span>% efficiency</p>
                 </div>
             </div>
+        </div>
+        <div id="debug">
+            <h2 class="text-2xl">Debug</h2>
+            <button class="rounded-lg bg-blue-400 p-2" id="add_money_1000">Add money to 1000$</button>
         </div>
     </div>
 </body>

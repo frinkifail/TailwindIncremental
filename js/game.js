@@ -8,7 +8,7 @@ function reload_displays() {
     document.getElementById('shop-item__efficiency-amount').textContent = shop.efficiency.amount.toLocaleString()
 }
 
-const game_interval = setInterval(update, 50)
+const game_interval = setInterval(update, 1000)
 const reload_interval = setInterval(reload_displays, 50)
 
 function transition_tab(tab) {
@@ -19,6 +19,12 @@ function transition_tab(tab) {
         }
         else if (tab === "shop") {
             elements.content.innerHTML = document.getElementById('shop').innerHTML;
+        }
+        else if (tab === "debug") {
+            elements.content.innerHTML = document.getElementById('debug').innerHTML;
+            document.getElementById('add_money_1000').onclick = () => {data.money += 1000}
+        } else {
+            alert("! ERROR ! Sorry, tab not specified")
         }
         elements.content.style.display = "block";
         elements.content = document.getElementById('body_content');
