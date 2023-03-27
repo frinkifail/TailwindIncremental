@@ -14,38 +14,31 @@
 </style>
 <body class="bg-black mx-5 mt-5 text-white">
     <!-- <h1 class="text-white text-3xl font-bold">Test</h1> -->
-    <nav>
-        <section id="logo" class="inline">
+    <nav class="w-full flex">
+        <section id="logo" class="items-center">
             <i class="fa-solid fa-wind text-3xl" style="color: #6491dd;"></i>
             <span class="text-3xl px-4" style="font-family: 'Poppins';">tailwindincremental</span>
         </section>
-        <section id="left-nav"
-            class="inline-flex justify-end items-center bg-transparent outline-none border-none text-sm transition-opacity duration-300 ease-in-out"
-            style="margin-left: 25%; width: 75%;">
-            <button onclick="transition_tab('home')" class="pr-5 opacity-50 hover:opacity-75">Home</button>
+        <section id="middle-nav" style="margin-left: 19%;">
+            <div class="text-center text-2xl" id="money-display-parent">
+                <h2 class="text-yellow-200" id="money-display-child"><span class="text-green-400 font-bold"
+                        id="money-display-child-child">0</span> KROMER</h2>
+                <h3 class="text-base"><span id="money-display-second-child-child"
+                        class="text-red-200 font-bold">1</span> per <span id="money display-second-child-second-child"
+                        class="text-blue-200 font-bold">1000</span>ms</h3>
+        </section>
+        <section id="right-nav"
+            style="margin-left: 39%;">
+            <!-- <button onclick="transition_tab('home')" class="pr-5 opacity-50 hover:opacity-75">Home</button> -->
             <button onclick="transition_tab('shop')" class="pr-5 opacity-50 hover:opacity-75">Shop</button>
             <button onclick="transition_tab('debug')" class="opacity-50 hover:opacity-75">Debug</button>
         </section>
     </nav>
     <!-- <main style="transition: opacity 5s ease-in-out;" id="body_content"> -->
     <main id="body_content" class="transition-opacity duration-500 ease-in-out">
-        <div class="text-center text-2xl" id="money display parent">
-            <h2 class="text-yellow-200" id="money display child"><span class="text-green-400 font-bold"
-                    id="money display child child">0</span> KROMER</h2>
-            <h3 class="text-base"><span id="money display second child child" class="text-red-200 font-bold">1</span>
-                per <span id="money display second child second child" class="text-blue-200 font-bold">1000</span>ms</h3>
-        </div>
+        <h1 class="flex w-full justify-center text-lg font-bold">Select a page on the AppBar.</h1>
     </main>
     <div class="hidden">
-        <div id="home">
-            <div class="text-center text-2xl" id="money display parent">
-                <h2 class="text-yellow-200" id="money display child"><span class="text-green-400 font-bold"
-                        id="money display child child">0</span> KROMER</h2>
-                <h3 class="text-base"><span id="money display second child child"
-                        class="text-red-200 font-bold">1</span> per <span id="money display second child second child"
-                        class="text-blue-200 font-bold">1000</span>ms</h3>
-            </div>
-        </div>
         <div id="settings">
             <h2 class="text-2xl">Settings</h2>
             <p>Nothing here yet.</p>

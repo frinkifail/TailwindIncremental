@@ -7,8 +7,8 @@ function update() {
     data.money += data.money_per_tick
 }
 function reload_displays() {
-    document.getElementById('money display child child').textContent = data.money.toLocaleString()
-    document.getElementById('money display second child child').textContent = data.money_per_tick.toLocaleString()
+    document.getElementById('money-display-child-child').textContent = data.money.toLocaleString()
+    document.getElementById('money-display-second-child-child').textContent = data.money_per_tick.toLocaleString()
     reload_shop_display_dynamic('efficiency')
     reload_shop_display_dynamic('generator')
 }
